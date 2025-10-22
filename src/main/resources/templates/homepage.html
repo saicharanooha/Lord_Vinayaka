@@ -2,145 +2,326 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>జై బోలో గణేష్ మహారాజ్ కీ జై</title>
 </head>
 <body style="
     margin:0;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at center, #ffefba, #ffb347, #ff8c00);
-    background-size: cover;
-    background-position: center;
-    overflow:hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #ffd700 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x:hidden;
+    padding:20px;
+    box-sizing:border-box;
+    position:relative;
 ">
+
+  <!-- Animated Background Particles -->
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div class="particle" style="top:10%; left:10%; animation-delay:0s;"></div>
+    <div class="particle" style="top:20%; left:80%; animation-delay:1s;"></div>
+    <div class="particle" style="top:60%; left:20%; animation-delay:2s;"></div>
+    <div class="particle" style="top:80%; left:70%; animation-delay:1.5s;"></div>
+    <div class="particle" style="top:40%; left:50%; animation-delay:0.5s;"></div>
+    <div class="particle" style="top:70%; left:90%; animation-delay:2.5s;"></div>
+  </div>
 
   <!-- Glassy Overlay -->
   <div style="
       position:relative;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-      border-radius: 20px;
-      padding: 40px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37), 0 0 60px rgba(255,215,0,0.3);
+      border-radius: 30px;
+      padding: 50px 30px;
       text-align:center;
-      width:90%;
+      width:100%;
       max-width:900px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.18);
+      animation: containerGlow 3s ease-in-out infinite;
   ">
 
-    <!-- Center Lord Vinayaka Image with Top-left Credit -->
+    <!-- Center Lord Vinayaka Image with Top Credit -->
     <div style="position:relative; display:flex; justify-content:center; align-items:center; flex-direction:column;">
 
-      <!-- Top-left Credit -->
+      <!-- Designer Credit -->
       <div style="
           position:absolute;
-          top:5px;
-          left:5px;
-          font-size:12px;
+          top:-30px;
+          left:50%;
+          transform:translateX(-50%);
+          font-size:14px;
+          font-weight:800;
+          padding:10px 24px;
+          border-radius:20px;
+          background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+          background-size: 200% 200%;
           color:#fff;
-          font-weight:500;
-          padding:4px 8px;
-          border-radius:6px;
-          background: rgba(0,0,0,0.3);
-          text-shadow: 1px 1px 2px #000;
-          backdrop-filter: blur(3px);
+          text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+          backdrop-filter: blur(10px);
+          z-index:10;
+          box-shadow: 0 6px 20px rgba(102,126,234,0.6);
+          border: 2px solid rgba(255,255,255,0.4);
+          animation: creditPulse 2s ease-in-out infinite, rainbowBG 4s ease infinite;
+          white-space:nowrap;
       ">
-        Designed and Developed by Nallagorla Saicharan, USA
+        ✨ Designed and Developed by Nallagorla Saicharan,USA ✨
       </div>
 
       <!-- Lord Vinayaka Image -->
-      <img src="/vinayaka.jpg" 
+      <img src="/Vinayaka.jpg" 
            alt="Lord Vinayaka"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
            style="
-               width:180px;
-               height:180px;
-               object-fit:contain;
-               margin-bottom:20px;
-               filter:drop-shadow(0 0 20px #ffb100);
-               animation:glow 2s infinite alternate;
-               border-radius:10px;
+               width:200px;
+               height:200px;
+               border-radius:50%;
+               object-fit:cover;
+               margin:20px 0;
+               animation: imageGlow 3s ease-in-out infinite;
+               box-shadow: 0 0 40px rgba(255,215,0,0.6), 0 0 80px rgba(255,107,107,0.4);
+               border: 4px solid rgba(255,255,255,0.3);
            ">
+      
+      <!-- Fallback if image not found -->
+      <div style="
+          display:none;
+          width:200px;
+          height:200px;
+          margin:20px 0;
+          border-radius:50%;
+          background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4, #a8e6cf);
+          background-size: 300% 300%;
+          align-items:center;
+          justify-content:center;
+          font-size:100px;
+          animation: imageGlow 3s ease-in-out infinite, rotateBG 8s linear infinite;
+          box-shadow: 0 0 40px rgba(255,215,0,0.6), 0 0 80px rgba(255,107,107,0.4);
+          border: 4px solid rgba(255,255,255,0.3);
+      ">
+        🕉️
+      </div>
 
-      <!-- Gradient Telugu Heading -->
+      <!-- Telugu Heading with Rainbow Glow -->
       <h1 style="
-          font-size:48px;
-          font-weight:800;
-          background: linear-gradient(90deg, #ffd700, #ff6f00, #ff1493, #ff4500);
+          font-size:clamp(28px, 7vw, 60px);
+          font-weight:900;
+          background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #7b68ee, #ff1493, #ffd700);
+          background-size: 300% 300%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          color: transparent;
-          margin:0 0 15px 0;
-          animation: glowText 2s infinite alternate;
+          margin:20px 0;
+          animation: rainbowText 3s ease-in-out infinite, textFloat 3s ease-in-out infinite;
+          letter-spacing: 3px;
+          filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
+          line-height:1.3;
       ">
-        జై బోలో గణేష్ మహారాజ్ కీ జై
+        🙏 జై బోలో గణేష్ మహారాజ్ కీ జై 🙏
       </h1>
 
-      <!-- Scrolling Name under image -->
+      <!-- Scrolling Mantra -->
       <div style="
           width:100%;
           overflow:hidden;
           white-space:nowrap;
           box-sizing:border-box;
-          margin-top:10px;
+          margin-top:15px;
+          background: rgba(255,255,255,0.1);
+          padding:10px 0;
+          border-radius:15px;
       ">
         <p style="
             display:inline-block;
             padding-left:100%;
-            animation: scrollName 12s linear infinite;
+            animation: scrollName 15s linear infinite;
             font-size:20px;
             font-weight:700;
-            color:#ffd700;
-            text-shadow: 0 0 6px #ff6f00;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: scrollName 15s linear infinite, rainbowScroll 3s linear infinite;
+            margin:0;
         ">
-          YouthName • YouthName • YouthName • YouthName
+          ఓం గం గణపతయే నమః • ఓం గం గణపతయే నమః • ఓం గం గణపతయే నమః
         </p>
       </div>
 
     </div>
 
-    <!-- Buttons Left & Right -->
-    <div style="display:flex; justify-content:space-between; margin-top:30px; width:100%;">
-
-      <!-- Left Buttons -->
-      <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Register</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Log In</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Make Money Gift</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Make Food Gift</button>
-      </div>
-
-      <!-- Right Buttons -->
-      <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-end;">
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Schedule Pooja</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Settings</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Notifications</button>
-        <button style="width:140px; padding:10px; font-size:16px; border:none; border-radius:12px; background: rgba(255,255,255,0.2); color:#222; cursor:pointer; backdrop-filter: blur(5px);">Logout</button>
-      </div>
+    <!-- Buttons Grid -->
+    <div style="
+        display:grid; 
+        grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); 
+        gap:15px; 
+        margin-top:40px; 
+        width:100%;
+    ">
+      <button onclick="alert('Register feature coming soon!')" class="glass-btn" style="--btn-color:#ff6b6b;">Register</button>
+      <button onclick="alert('Login feature coming soon!')" class="glass-btn" style="--btn-color:#4ecdc4;">Log In</button>
+      <button onclick="alert('Money Gift feature coming soon!')" class="glass-btn" style="--btn-color:#feca57;">Money Gift</button>
+      <button onclick="alert('Food Gift feature coming soon!')" class="glass-btn" style="--btn-color:#ff9ff3;">Food Gift</button>
+      <button onclick="alert('Schedule Pooja feature coming soon!')" class="glass-btn" style="--btn-color:#a8e6cf;">Schedule Pooja</button>
+      <button onclick="alert('Settings feature coming soon!')" class="glass-btn" style="--btn-color:#dfe6e9;">Settings</button>
+      <button onclick="alert('Notifications feature coming soon!')" class="glass-btn" style="--btn-color:#fdcb6e;">Notifications</button>
+      <button onclick="alert('Logout feature coming soon!')" class="glass-btn" style="--btn-color:#fd79a8;">Logout</button>
     </div>
 
   </div>
 
-  <!-- Glow and scroll animation -->
+  <!-- Styles -->
   <style>
-    @keyframes glow {
-      from { filter: drop-shadow(0 0 5px #ffb100); }
-      to   { filter: drop-shadow(0 0 25px #ffb100); }
+    .particle {
+      position:absolute;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
+      animation: float 6s ease-in-out infinite;
+      filter: blur(2px);
     }
 
-    @keyframes glowText {
-      from { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff6f00; }
-      to   { text-shadow: 0 0 20px #ff1493, 0 0 40px #ff4500; }
+    .glass-btn {
+      padding:14px 18px;
+      font-size:15px;
+      font-weight:700;
+      border:none;
+      border-radius:15px;
+      background: rgba(255,255,255,0.2);
+      color:#fff;
+      cursor:pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.4s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .glass-btn::before {
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.5s;
+    }
+
+    .glass-btn:hover::before {
+      left:100%;
+    }
+
+    .glass-btn:hover {
+      background: rgba(255,255,255,0.35);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .glass-btn:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes containerGlow {
+      0%, 100% { box-shadow: 0 8px 32px rgba(31,38,135,0.37), 0 0 60px rgba(255,215,0,0.3); }
+      50% { box-shadow: 0 8px 32px rgba(31,38,135,0.37), 0 0 80px rgba(255,107,107,0.6); }
+    }
+
+    @keyframes imageGlow {
+      0%, 100% { 
+        box-shadow: 0 0 40px rgba(255,215,0,0.6), 0 0 80px rgba(255,107,107,0.4);
+        filter: drop-shadow(0 0 30px rgba(255,215,0,0.8));
+      }
+      33% { 
+        box-shadow: 0 0 50px rgba(78,205,196,0.7), 0 0 90px rgba(123,104,238,0.5);
+        filter: drop-shadow(0 0 30px rgba(78,205,196,0.8));
+      }
+      66% { 
+        box-shadow: 0 0 45px rgba(255,20,147,0.6), 0 0 85px rgba(255,140,0,0.5);
+        filter: drop-shadow(0 0 30px rgba(255,20,147,0.8));
+      }
+    }
+
+    @keyframes rotateBG {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes rainbowText {
+      0% { 
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
+      }
+      33% { 
+        background-position: 50% 50%;
+        filter: drop-shadow(0 0 25px rgba(64,224,208,0.9));
+      }
+      66% { 
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 25px rgba(255,20,147,0.9));
+      }
+      100% { 
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
+      }
+    }
+
+    @keyframes textFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes creditPulse {
+      0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 6px 20px rgba(102,126,234,0.6);
+      }
+      50% { 
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 8px 30px rgba(240,147,251,0.8);
+      }
+    }
+
+    @keyframes rainbowBG {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    @keyframes rainbowScroll {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
 
     @keyframes scrollName {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-30px) translateX(20px); }
+      50% { transform: translateY(-60px) translateX(-20px); }
+      75% { transform: translateY(-30px) translateX(20px); }
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      .glass-btn { font-size: 14px; padding: 12px; }
     }
   </style>
 
