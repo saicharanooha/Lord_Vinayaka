@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +40,10 @@
       -webkit-backdrop-filter: blur(20px);
       box-shadow: 0 8px 32px rgba(31,38,135,0.37), 0 0 60px rgba(255,215,0,0.3);
       border-radius: 30px;
-      padding: 50px 30px;
+      padding: 40px 25px;
       text-align:center;
       width:100%;
-      max-width:900px;
+      max-width:700px;
       border: 2px solid rgba(255,255,255,0.18);
       animation: containerGlow 3s ease-in-out infinite;
   ">
@@ -72,11 +72,11 @@
           animation: creditPulse 2s ease-in-out infinite, rainbowBG 4s ease infinite;
           white-space:nowrap;
       ">
-        ✨ Designed and Developed by Nallagorla Saicharan,USA ✨
+        ✨ Designed by Nallagorla Saicharan ,USA✨
       </div>
 
       <!-- Lord Vinayaka Image -->
-      <img src="/Vinayaka.jpg" 
+      <img th:src="@{/Vinayaka.jpg}" 
            alt="Lord Vinayaka"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
            style="
@@ -127,7 +127,7 @@
         🙏 జై బోలో గణేష్ మహారాజ్ కీ జై 🙏
       </h1>
 
-      <!-- Scrolling Mantra -->
+      <!-- Scrolling Youth Name -->
       <div style="
           width:100%;
           overflow:hidden;
@@ -142,8 +142,8 @@
             display:inline-block;
             padding-left:100%;
             animation: scrollName 15s linear infinite;
-            font-size:20px;
-            font-weight:700;
+            font-size:22px;
+            font-weight:800;
             background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
             background-size: 200% 200%;
             -webkit-background-clip: text;
@@ -151,13 +151,13 @@
             animation: scrollName 15s linear infinite, rainbowScroll 3s linear infinite;
             margin:0;
         ">
-          ఓం గం గణపతయే నమః • ఓం గం గణపతయే నమః • ఓం గం గణపతయే నమః
+          GokulKrishna Youth • GokulKrishna Youth • GokulKrishna Youth • GokulKrishna Youth
         </p>
       </div>
 
     </div>
 
-    <!-- Buttons Grid -->
+    <!-- Buttons Grid with API Mappings -->
     <div style="
         display:grid; 
         grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); 
@@ -165,14 +165,14 @@
         margin-top:40px; 
         width:100%;
     ">
-      <button onclick="alert('Register feature coming soon!')" class="glass-btn" style="--btn-color:#ff6b6b;">Register</button>
-      <button onclick="alert('Login feature coming soon!')" class="glass-btn" style="--btn-color:#4ecdc4;">Log In</button>
-      <button onclick="alert('Money Gift feature coming soon!')" class="glass-btn" style="--btn-color:#feca57;">Money Gift</button>
-      <button onclick="alert('Food Gift feature coming soon!')" class="glass-btn" style="--btn-color:#ff9ff3;">Food Gift</button>
-      <button onclick="alert('Schedule Pooja feature coming soon!')" class="glass-btn" style="--btn-color:#a8e6cf;">Schedule Pooja</button>
-      <button onclick="alert('Settings feature coming soon!')" class="glass-btn" style="--btn-color:#dfe6e9;">Settings</button>
-      <button onclick="alert('Notifications feature coming soon!')" class="glass-btn" style="--btn-color:#fdcb6e;">Notifications</button>
-      <button onclick="alert('Logout feature coming soon!')" class="glass-btn" style="--btn-color:#fd79a8;">Logout</button>
+      <button onclick="window.location.href='/signup'" class="glass-btn" style="--btn-color:#ff6b6b;">Register</button>
+      <button onclick="window.location.href='/login'" class="glass-btn" style="--btn-color:#4ecdc4;">Log In</button>
+      <button onclick="window.location.href='/money-gift'" class="glass-btn" style="--btn-color:#feca57;">Money Gift</button>
+      <button onclick="window.location.href='/food-gift'" class="glass-btn" style="--btn-color:#ff9ff3;">Food Gift</button>
+      <button onclick="window.location.href='/schedule-pooja'" class="glass-btn" style="--btn-color:#a8e6cf;">Schedule Pooja</button>
+      <button onclick="window.location.href='/settings'" class="glass-btn" style="--btn-color:#dfe6e9;">Settings</button>
+      <button onclick="window.location.href='/notifications'" class="glass-btn" style="--btn-color:#fdcb6e;">Notifications</button>
+      <button onclick="window.location.href='/logout'" class="glass-btn" style="--btn-color:#fd79a8;">Logout</button>
     </div>
 
   </div>
